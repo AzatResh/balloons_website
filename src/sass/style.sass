@@ -1,0 +1,126 @@
+@font-face 
+    font-display: swap
+    font-family: "_Lato"
+    src: url('../fonts/Lato-Regular.ttf')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-display: swap
+    font-family: "_Lato"
+    src: url('../fonts/Lato-Bold.ttf')
+    font-weight: bold
+    font-style: normal
+
+*
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+    font-family: "_Lato", sans-serif
+    font-weight: 400
+    color: #777777
+    font-size: 1.6rem
+    letter-spacing: 0.2rem
+    padding: 5rem
+    background: #FFFFFF
+
+.container
+    background: #F7F7F7
+    padding: 0
+
+.header
+    position: relative
+    height: 95vh
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/pexels-mehmet-turgut-kirkgoz-5865634 2.jpg") center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    &__logo
+        position: absolute
+        top: 5rem
+        left: 5rem
+        height: 7rem
+        width: 5.6rem
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100% 
+        text-align: center
+
+.title-first
+    color: #FFFFFF
+    animation-name: leftToRight
+    animation-duration: 4s
+    animation-delay: 1.5s
+    margin-bottom: 6.5rem
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        margin-bottom: 1rem
+    &__second
+        display: block
+        font-weight: 100
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: 0.5rem
+
+.btn
+    position: relative
+    &:link, &:visited
+        text-transform: uppercase
+        text-decoration: none
+        background: white
+        color: #777777
+        padding: 1.5rem 4rem
+        border-radius: 5rem
+        transition: all 0.5s
+        font-size: 2rem
+    &:hover
+        transform: translateY(-0.4rem)
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1))
+        &::after
+            opacity: 0
+            transform: scale(1.5)
+    &:active
+        transform: translateX(-0.2rem)
+    &::after
+        content: ""
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all 0.5s
+    &_animation
+        animation: bottomToUp 0.5s ease-out 1.7s
+        animation-fill-mode: backwards
+
+:not(.btn-check)+.btn:active
+    background: white
+        
+        
+@keyframes leftToRight
+    0%
+        opacity: 0
+        transform: translateX(-10rem)
+    100%
+        opacity: 1
+        transform: translateX(0px)
+        
+@keyframes bottomToUp
+    0%
+        opacity: 0
+        transform: translateY(5rem)
+    100%
+        opacity: 1
+        transform: translateY(0px)
