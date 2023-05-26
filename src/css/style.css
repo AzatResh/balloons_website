@@ -90,12 +90,12 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
   -webkit-background-clip: text;
   color: transparent;
+  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   transition: all 0.4s;
   backface-visibility: hidden;
 }
 .title-second:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
 .title-third {
@@ -112,8 +112,16 @@ body {
   line-height: 140%;
 }
 
+.adventure-card .paragraph {
+  letter-spacing: 0.15rem;
+}
+
 .margin-bottom-10px {
   margin-bottom: 1rem;
+}
+
+.margin-bottom-25px {
+  margin-bottom: 2.5rem;
 }
 
 .margin-bottom-30px {
@@ -131,7 +139,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/pexels-mehmet-turgut-kirkgoz-5865634 2.jpg") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/pexels-julia-volk-6118899 1.jpg") center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
@@ -154,6 +162,7 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
+  --bs-gutter-x: 0;
 }
 .row:not(:last-child) {
   margin-bottom: 8rem;
@@ -197,6 +206,14 @@ body {
 
 .section-about {
   padding-top: 8rem;
+  margin-bottom: 5.4rem;
+}
+
+.section-cards {
+  padding: 21.6rem 0;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/cards_background.png") center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 14%, 100% 94%, 0 86%);
+          clip-path: polygon(0 0, 100% 14%, 100% 94%, 0 86%);
 }
 
 .btn {
@@ -248,10 +265,10 @@ body {
 }
 
 .btn-text:link, .btn-text:visited {
+  color: #A14F03;
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  color: #777777;
   text-decoration: none;
   padding: 1rem;
   border-bottom: 1px solid #BA8554;
@@ -266,4 +283,56 @@ body {
 }
 .btn-text:active {
   transform: translateY(0);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 60%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.8s;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0;
+  left: 2rem;
+}
+.composition__photo_n2 {
+  top: 9rem;
+  right: 0;
+}
+.composition__photo_n3 {
+  top: 16.4rem;
+  left: 4rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #BA8554;
+  transform: scale(1.03);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.97);
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(250, 250, 250, 0.8);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.adventure-card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
 }/*# sourceMappingURL=style.css.map */
