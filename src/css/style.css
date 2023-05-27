@@ -32,8 +32,10 @@ body {
 }
 
 .container {
+  position: relative;
   background: #F7F7F7;
   padding: 0;
+  z-index: 0;
 }
 
 @font-face {
@@ -96,6 +98,9 @@ body {
 }
 .title-second:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
+}
+.title-second_white {
+  color: #FAFAFA;
 }
 
 .title-third {
@@ -223,6 +228,11 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 14%, 100% 94%, 0 86%);
           clip-path: polygon(0 0, 100% 14%, 100% 94%, 0 86%);
   margin-bottom: 4rem;
+}
+
+.section-feedback {
+  position: relative;
+  padding: 8rem 0;
 }
 
 .btn {
@@ -449,4 +459,79 @@ body {
 }
 .tour-card:hover .tour-card__side_back {
   transform: rotateY(0deg);
+}
+
+.feedback-card {
+  position: relative;
+  width: 70%;
+  background: rgba(250, 250, 250, 0.75);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 5rem 6rem 3rem 7rem;
+  transform: skewX(330deg);
+}
+.feedback-card > * {
+  transform: skewX(-330deg);
+}
+.feedback-card__block {
+  width: 90%;
+}
+.feedback-card__img {
+  position: relative;
+  height: 16rem;
+  width: 16rem;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+}
+.feedback-card__img img {
+  height: 100%;
+  transform: scale(1.05);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.feedback-card:hover .feedback-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.feedback-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(90%);
+}
+.feedback-card__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  opacity: 0;
+  color: #FAFAFA;
+}
+
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-video-gradient {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #BA8554, #000000);
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */
