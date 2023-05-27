@@ -1,6 +1,6 @@
 .btn
     position: relative
-    &:link, &:visited
+    &,&:link, &:visited
         @include style-link($color-grey)
         background: $color-white
         padding: 1.5rem 4rem
@@ -31,6 +31,9 @@
     &_animation
         animation: bottomToUp 0.5s ease-out 1.7s
         animation-fill-mode: backwards
+    &_brown
+        &,&:link, &:visited
+            background: $color-brown-dark
 
 :not(.btn-check)+.btn:active
     background: white

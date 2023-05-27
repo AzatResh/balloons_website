@@ -145,6 +145,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.padding-left-35px {
+  padding-left: 3.5rem;
+}
+
 .text-align-center {
   text-align: center;
 }
@@ -235,10 +239,15 @@ body {
   padding: 8rem 0;
 }
 
+.section-book {
+  padding: 10rem;
+  background: linear-gradient(90deg, #BA8554, #000000);
+}
+
 .btn {
   position: relative;
 }
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -277,6 +286,9 @@ body {
 .btn_animation {
   animation: bottomToUp 0.5s ease-out 1.7s;
   animation-fill-mode: backwards;
+}
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
 }
 
 :not(.btn-check) + .btn:active {
@@ -534,4 +546,97 @@ body {
   left: 0;
   background: linear-gradient(90deg, #BA8554, #000000);
   opacity: 0.5;
+}
+
+.book-block {
+  height: 50rem;
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 57%, rgba(186, 133, 80, 0.8) 57%, rgba(161, 79, 3, 0.8) 100%), url("../img/form-img.jpg") center/cover no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-form {
+  width: 60%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+.card-form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.card-form__input {
+  width: 52%;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: #000000;
+  font-weight: 400;
+  background: #FAFAFA;
+  padding: 2rem 0rem 2rem 2rem;
+  border: none;
+  border-bottom: 0.2rem solid transparent;
+  border-radius: 0.5rem;
+}
+.card-form__input:focus {
+  outline: none;
+  border-bottom: 0.2rem solid #66D763;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.card-form__input:focus:invalid {
+  border-bottom: 0.2rem solid #D76363;
+}
+.card-form__label {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  transition: 0.5s all;
+}
+.card-form__input:-moz-placeholder-shown + .card-form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+}
+.card-form__input:placeholder-shown + .card-form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+}
+.card-form__group-radio {
+  width: 35%;
+  display: inline-block;
+}
+.card-form__label-radio {
+  position: relative;
+  cursor: pointer;
+}
+.card-form__input-radio {
+  display: none;
+}
+.card-form__button-radio {
+  display: block;
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10rem;
+  border: 0.5rem solid #A14F03;
+  top: -0.4rem;
+  left: -3.4rem;
+}
+.card-form__button-radio::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  background: #A14F03;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s all;
+}
+.card-form__input-radio:checked ~ .card-form__label-radio .card-form__button-radio::after {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
