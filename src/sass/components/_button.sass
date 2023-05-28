@@ -32,8 +32,9 @@
         animation: bottomToUp 0.5s ease-out 1.7s
         animation-fill-mode: backwards
     &_brown
-        &,&:link, &:visited
-            background: $color-brown-dark
+        &,&:link, &:visited, &:hover, &::after
+            background: $color-brown-light
+            color: $color-white
 
 :not(.btn-check)+.btn:active
     background: white
