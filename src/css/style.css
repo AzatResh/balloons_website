@@ -250,6 +250,117 @@ body {
   margin-right: 6rem;
 }
 
+.navigation__button {
+  background: #FAFAFA;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 7rem;
+  top: 7rem;
+  z-index: 12;
+  text-align: center;
+}
+.navigation__backround {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(#BA8554, #A14F03);
+  position: fixed;
+  right: 8rem;
+  top: 8rem;
+  z-index: 10;
+  transform: scale(0);
+  transition: 0.7s all;
+}
+.navigation__nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  opacity: 0;
+  transition: 0.7s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.navigation__toggle {
+  display: none;
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.navigation__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 29px;
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background: #000000;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: 0.5s all;
+}
+.navigation__icon::before {
+  top: -8px;
+}
+.navigation__icon::after {
+  top: 8px;
+}
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  color: #FAFAFA;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, #FAFAFA 50%);
+  background-size: 230%;
+  padding: 1rem 2rem;
+  transition: 0.5s all;
+}
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #A14F03;
+  transform: translateX(1rem);
+}
+.navigation__toggle:checked ~ .navigation__backround {
+  transform: scale(100);
+}
+.navigation__toggle:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -10px;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 10px;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
 .section-about {
   padding-top: 8rem;
   margin-bottom: 5.4rem;
