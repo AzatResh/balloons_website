@@ -1,11 +1,13 @@
 .feedback-card
     position: relative
-    width: 70%
+    width: 80%
     background: rgba($color-white, 0.75)
     box-shadow: $box-shadow
     margin: 0 auto
     padding: 5rem 6rem 3rem 7rem
     transform: skewX(330deg)
+    @include respond(tab-land)
+        padding: 5rem 3rem 3rem 6rem
     &>*
         transform: skewX(-330deg)
     &__block
