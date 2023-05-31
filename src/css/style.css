@@ -235,9 +235,14 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/pexels-julia-volk-6118899 1.jpg") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header.jpg") center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+@media (-webkit-min-device-pixel-ratio: 2) or (min-width: 1340px), (min-resolution: 192dpi) or (min-width: 1340px) {
+  .header {
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header-big.jpg") center/cover no-repeat;
+  }
 }
 .header__logo {
   position: absolute;
@@ -711,7 +716,7 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card {
     height: 70rem;
     margin-bottom: 5rem;
@@ -724,7 +729,7 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__img {
     height: 35.5rem;
   }
@@ -749,7 +754,7 @@ body {
   top: 18.5rem;
   right: 0rem;
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__title {
     top: 30rem;
     font-size: 3.8rem;
@@ -794,7 +799,7 @@ body {
   right: 0;
   padding-bottom: 1rem;
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__span_2 {
     top: 4.6rem;
     position: relative;
@@ -806,7 +811,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__backside-box {
     position: relative;
     top: 0;
@@ -823,7 +828,7 @@ body {
   text-align: center;
   letter-spacing: 0.2rem;
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__text {
     margin-bottom: 6.7rem;
   }
@@ -851,7 +856,7 @@ body {
 .tour-card__side_front {
   background: white;
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__side_front {
     padding-bottom: 8rem;
   }
@@ -860,7 +865,7 @@ body {
   transform: rotateY(180deg);
   background: linear-gradient(157deg, #BA8554, #A14F03);
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__side_back {
     transform: rotateY(0deg);
     padding: 5rem;
@@ -869,7 +874,7 @@ body {
             clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%);
   }
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card__side {
     position: relative;
     height: auto;
@@ -879,7 +884,7 @@ body {
 .tour-card:hover .tour-card__side_front {
   transform: rotateY(180deg);
 }
-@media (max-width: 900px) {
+@media only screen and ((max-width: 900px) or (hover: none)) {
   .tour-card:hover .tour-card__side_front {
     transform: rotateY(0deg);
   }
