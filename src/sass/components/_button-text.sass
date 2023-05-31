@@ -9,6 +9,8 @@
         border-bottom: 1px solid $color-brown-light
         display: inline-block
         transition: all 0.4s
+        @include respond(tab-port)
+            margin-bottom: 3rem
     &:hover
         background-color: $color-brown-light
         color: $color-white

@@ -11,7 +11,10 @@
     margin-bottom: 4rem
     @include respond(tab-land)
         padding: 15rem 0
-
+    @include respond(tab-port)
+        clip-path: polygon(0 0, 100% 5%, 100% 94%, 0 90%)
+        padding: 8rem 0rem 12rem 0rem
+        margin-bottom: 0rem
 .section-feedback
     position: relative
     padding: 8rem 0
@@ -19,3 +22,5 @@
 .section-book
     padding: 10rem
     background: linear-gradient(90deg, $color-brown-light, $color-black) 
+    @include respond(phone)
+        padding: 3rem

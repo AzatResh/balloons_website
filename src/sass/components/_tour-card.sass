@@ -6,6 +6,7 @@
     @include respond(tab-port)
         height: 70rem
         margin-bottom: 5rem
+        height: auto
     &__img
         height: 24.5rem
         background-blend-mode: hard-light
@@ -62,18 +63,28 @@
             padding-bottom: 1rem
             @include respond(tab-port)
                 top: 4.6rem
+                position: relative
     
     &__backside-box
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        @include respond(tab-port)
+            position: relative
+            top: 0
+            left: 0
+            transform: none
+            padding-top: 3rem
+            text-align: center
     &__text
         margin-bottom: 8.7rem
         text-transform: uppercase
         color: $color-white
         text-align: center
         letter-spacing: .2rem
+        @include respond(tab-port)
+            margin-bottom: 6.7rem
         &_1
             font-size: $font-size-paragraph
             font-weight: 300
@@ -93,11 +104,24 @@
         overflow: hidden
         &_front
             background: white
+            @include respond(tab-port)
+                padding-bottom: 8rem
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(157deg, $color-brown-light, $color-brown-dark)
+            @include respond(tab-port)
+                transform: rotateY(0deg)
+                padding: 5rem
+                margin-top: -6rem
+                clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%)
+        @include respond(tab-port)
+            position: relative
+            height: auto
+            transform: rotateY(0deg)
         
     &:hover &__side_front
         transform: rotateY(180deg)
+        @include respond(tab-port)
+            transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
